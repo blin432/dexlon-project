@@ -1,0 +1,43 @@
+
+
+@include mediaMd{
+    .landing-page-wrapper p:first-child{
+        font-size:52px; 
+    }
+    .nav-item a:before {
+        content: "";
+        position: absolute;
+        width: 12%;
+        height: 1px;
+        bottom: 8px;
+        left: 0;
+        right:0;
+        background-color:black;
+        visibility: hidden;
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0);
+        -webkit-transition: all 0.3s ease-in-out 0s;
+        transition: all 0.3s ease-in-out 0s;
+    }
+      
+    .nav-item a:hover:before {
+        visibility: visible;
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+    }
+    @keyframes typing {
+        from { width: 0 }
+        to { width: 70%;}
+      }
+      
+}
+
+
+@include mediaLg{
+    .about-me-picture{
+        border-right:none;
+    }
+    .about-me-description{
+        border-left:none;
+    }
+}
